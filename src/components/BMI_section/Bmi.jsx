@@ -6,6 +6,7 @@ export default function Bmi() {
     return (
         <div>
             <h1>{name1}</h1>
+            <h1>ignore it</h1>
         </div>
     )
 }
