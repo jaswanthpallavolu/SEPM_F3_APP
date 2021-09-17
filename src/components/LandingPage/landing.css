@@ -9,9 +9,35 @@
 
     font-size: 1.2rem;
 }
+.landing .nav li {
+    color: var(--secondary-dark);
+    padding: .5rem;
+    background-color: var(--secondary-light);
+    border-radius: 5px;
+}
+.landing .nav li:hover{
+    box-shadow: 0 0 4px var(--dark);
+}
+ 
 .landing > h1{
     margin-top: 1rem;
     font-size: 5rem;
     text-align: center;
     color: var(--primary);
+}
+.landing > .notes{
+    display: flex;
+    gap:2rem;
+    justify-content: center;
+    padding: .5rem;
+    background: var(--secondary-dark);
+    list-style: none;
+}
+.landing > .notes .main{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.landing > .notes a{
+    
+    color:var(--dark)
 }

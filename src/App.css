@@ -1,10 +1,15 @@
 :root{
 
   /* COLOR PALLETS */
-  --primary:hsl(40, 100%, 55%);
-  --primary-light:hsl(43, 100%, 79%);
+  --primary:hsl(271, 90%, 60%);
+  --primary-light:hsl(271, 100%, 90%);
+  --primary-dark:hsl(271, 44%, 75%);
+
+  --secondary-dark:hsl(346, 100%, 70%);
+  --secondary-light:hsl(346, 100%, 80%);
+
   --dark:hsl(258, 80%, 10%);
-  --secondary-light:hsl(169, 38%, 80%);
+  
 
   /* fonts */
   font-family: 'open sans';

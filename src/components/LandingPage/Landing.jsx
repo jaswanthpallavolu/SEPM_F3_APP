@@ -12,10 +12,15 @@ export default function Landing() {
             <h1>{title}</h1>
             <Countdown />
             <ul className="nav">
-                <li><Link to="/home/bmi">BMI section</Link></li>
-                <li><Link to="/home/cal_calc">calorie section</Link></li>
-                <li><Link to="/home/diet">Diet and nutrition section</Link></li>
-                <li><Link to="/home/fitness">Fitness section</Link></li>
+                <li><Link style={{ textDecoration: 'none', color: 'var(--dark)' }} to="/home/bmi">BMI section</Link></li>
+                <li><Link style={{ textDecoration: 'none', color: 'var(--dark)' }} classname="link" to="/home/cal_calc">calorie section</Link></li>
+                <li><Link style={{ textDecoration: 'none', color: 'var(--dark)' }} classname="link" to="/home/diet">Diet and nutrition section</Link></li>
+                <li><Link style={{ textDecoration: 'none', color: 'var(--dark)' }} classname="link" to="/home/fitness">Fitness section</Link></li>
+            </ul>
+            <ul className="notes">
+                <li className="main">Note : </li>
+                <li><a href="https://mui.com/">Material UI</a></li>
+                <li><a href="https://mui.com/components/modal/#main-content">for "Modal"</a></li>
             </ul>
         </div>
     )
