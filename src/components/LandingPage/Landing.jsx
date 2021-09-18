@@ -12,10 +12,10 @@ export default function Landing() {
             <h1>{title}</h1>
             <Countdown />
             <ul className="nav">
-                <li><Link style={{ textDecoration: 'none', color: 'var(--dark)' }} to="/home/bmi">BMI section</Link></li>
-                <li><Link style={{ textDecoration: 'none', color: 'var(--dark)' }} classname="link" to="/home/cal_calc">calorie section</Link></li>
-                <li><Link style={{ textDecoration: 'none', color: 'var(--dark)' }} classname="link" to="/home/diet">Diet and nutrition section</Link></li>
-                <li><Link style={{ textDecoration: 'none', color: 'var(--dark)' }} classname="link" to="/home/fitness">Fitness section</Link></li>
+                <li><Link style={{ textDecoration: 'none', color: 'var(--dark)' }} to="/bmi">BMI section</Link></li>
+                <li><Link style={{ textDecoration: 'none', color: 'var(--dark)' }} classname="link" to="/cal_calc">calorie section</Link></li>
+                <li><Link style={{ textDecoration: 'none', color: 'var(--dark)' }} classname="link" to="/diet">nutrition section</Link></li>
+                <li><Link style={{ textDecoration: 'none', color: 'var(--dark)' }} classname="link" to="/fitness">Fitness section</Link></li>
             </ul>
             <ul className="notes">
                 <li className="main">Note : </li>
