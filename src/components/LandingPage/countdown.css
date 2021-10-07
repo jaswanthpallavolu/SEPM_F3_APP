@@ -13,6 +13,7 @@
 .phase   .counter{
     width:min(13rem,25vw);
     aspect-ratio: 1/1;
+    background:rgb(255, 255, 255,.5);
     display: flex;
     flex-direction: column;
     align-items: center;

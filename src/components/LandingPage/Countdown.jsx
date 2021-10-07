@@ -4,7 +4,7 @@ import './countdown.css'
 export default function Countdown() {
 
     const countdown = () => {
-        const countDate = new Date('09/25/2021 00:00:00').getTime();
+        const countDate = new Date('10/15/2021 00:00:00').getTime();
         const currentDate = new Date().getTime();
 
         const gap = countDate - currentDate;

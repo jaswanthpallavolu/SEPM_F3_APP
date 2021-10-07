@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import Navbar from '../navbar/Navbar'
 import Landing from '../LandingPage/Landing'
 import Bmi from '../BMI_section/Bmi'
@@ -12,13 +12,13 @@ export default function Layout() {
         <>
             <Navbar />
             <div className="container">
-                <Switch>
-                    <Route exact path='/' component={Landing} />
-                    <Route path='/bmi' component={Bmi} />
-                    <Route path='/cal_calc' component={CalorieCalc} />
-                    <Route path='/diet' component={Nutrition} />
-                    <Route path='/fitness' component={Fitness} />
-                </Switch>
+
+                <Route exact path='/home' component={Landing} />
+                <Route path='/home/bmi' component={Bmi} />
+                <Route path='/home/cal_calc' component={CalorieCalc} />
+                <Route path='/home/diet' component={Nutrition} />
+                <Route path='/home/fitness' component={Fitness} />
+
             </div>
         </>
     )
