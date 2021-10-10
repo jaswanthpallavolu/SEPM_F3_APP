@@ -16,7 +16,7 @@ export default function Layout() {
                 <Route exact path='/home' component={Landing} />
                 <Route path='/home/bmi' component={Bmi} />
                 <Route path='/home/cal_calc' component={CalorieCalc} />
-                <Route path='/home/diet' component={Nutrition} />
+                <Route path='/home/nutrition' component={Nutrition} />
                 <Route path='/home/fitness' component={Fitness} />
 
             </div>
