@@ -42,6 +42,7 @@
     color: var(--primary);
 }
 .landing .content > .notes{
+    margin-top: 3rem;
     display: flex;
     gap:2rem;
     justify-content: center;

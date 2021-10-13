@@ -4,7 +4,7 @@ import './countdown.css'
 export default function Countdown() {
 
     const countdown = () => {
-        const countDate = new Date('10/15/2021 00:00:00').getTime();
+        const countDate = new Date('10/18/2021 00:00:00').getTime();
         const currentDate = new Date().getTime();
 
         const gap = countDate - currentDate;
@@ -41,7 +41,7 @@ export default function Countdown() {
     }, [])
     return (
         <div className="phase">
-            <h1>Development Phase-1 (until)</h1>
+            <h2>Do this with Team work (show 40% completion in this period of time )</h2>
             <section className="countdown">
                 <div className="counter">
                     <h2 className="day">0</h2>
