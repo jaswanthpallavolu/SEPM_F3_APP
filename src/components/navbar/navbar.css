@@ -102,7 +102,7 @@
     padding: 0rem .5rem;
     place-items: center;
     height:100%;
-    font-size: calc(.8rem,5vw,1.3rem);
+    font-size: clamp(.8rem,5vw,1.3rem);
     font-weight: 100;
     background: var(--dark);
     color: white;
@@ -176,6 +176,9 @@
     .header label{
         width:4rem;
         height:100%;
+    }
+    .options .menus .link{
+        font-size: clamp(.7rem,5vw,1.3rem);
     }
      
 }
