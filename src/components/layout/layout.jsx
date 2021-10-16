@@ -7,6 +7,7 @@ import CalorieCalc from '../Cal_calc_Section/CalorieCalc'
 import Nutrition from '../Nutrition_section/Nutrition'
 import Fitness from '../Fitness_Section/Fitness'
 
+import '../../App.css';
 export default function Layout() {
     return (
         <>

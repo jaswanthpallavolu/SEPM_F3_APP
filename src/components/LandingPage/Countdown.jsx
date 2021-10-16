@@ -33,12 +33,11 @@ export default function Countdown() {
 
 
     useEffect(() => {
+        countdown()
         const id = setInterval(countdown, 1000);
         return () => clearInterval(id);
-    })
-    useEffect(() => {
-        countdown()
     }, [])
+
     return (
         <div className="phase">
             <h2>Do this with Team work (show 40% completion in this period of time )</h2>

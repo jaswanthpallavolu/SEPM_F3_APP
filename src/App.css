@@ -9,8 +9,8 @@
   --secondary-light:hsl(346, 100%, 80%);
 
   --dark:hsl(258, 80%, 10%);
+  --light: white;
   
-
   /* fonts */
   font-family: 'open sans';
 
@@ -20,3 +20,15 @@
   margin:0;
   padding:0;
 }
+ 
+::-webkit-scrollbar{
+  background: var(--dark);
+  width:.7rem; 
+}
+
+::-webkit-scrollbar-thumb{
+  width: 0.5em;
+  border-radius: 1rem;
+  background: var(--light);
+}
+ 
