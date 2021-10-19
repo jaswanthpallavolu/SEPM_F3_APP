@@ -106,7 +106,9 @@ const Main = ({ setBmi, setIdl }) => {
         request2()
 
 
-    }, [values])
+    }, [values]) //eslint-disable-line react-hooks/exhaustive-deps
+
+
 
 
     return (
