@@ -8,7 +8,7 @@ const Main = ({ setBmi, setIdl }) => {
 
 
     const [values, setValues] = useState({
-        height: 130,
+        height: 180,
         weight: 60,
         age: 24,
         gender: 'male',
