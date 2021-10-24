@@ -25,7 +25,7 @@ const Main = ({ setBmi, setIdl }) => {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        width: 'min(23rem,70%)',
+        width: 'min(25rem,70%)',
         bgcolor: 'background.paper',
         border: '1px solid #000',
         boxShadow: 20,
@@ -106,7 +106,7 @@ const Main = ({ setBmi, setIdl }) => {
         request2()
 
 
-    }, [values]) //eslint-disable-line react-hooks/exhaustive-deps 
+    }, [values])//eslint-disable-line react-hooks/exhaustive-deps 
 
 
 
@@ -150,7 +150,7 @@ const Main = ({ setBmi, setIdl }) => {
                 </div>
 
                 <div className="itemt3">
-                    <div onClick={() => setOpen(true)}></div>
+                    <div onClick={() => setOpen(true)}><i class="fas fa-pen"></i></div>
                     <Modal
                         aria-labelledby="transition-modal-title"
                         aria-describedby="transition-modal-description"

@@ -7,7 +7,7 @@
     padding-top:5rem;
     padding-left:3%;
     padding-right:3%;
-    background-color: rgba(191, 162, 219, 1);
+    background-color: var(--primary-dark);
     background-image: url('../../assets/blob1.png');
     background-size: cover;
     z-index: -1;
@@ -20,22 +20,26 @@
 }
 
 .bmi .hdng span{
-    height:5rem;
-    width:0.8rem;
+    height:4.16vw;
+    width:0.78vw;
     
     
-    background-color:rgba(155, 61, 245, 1);
+    background-color: var(--primary);
 }
 
 .bmi .hdng h3{
      
-    font-size: 4.5rem;
+    font-size: clamp(1.5rem,2rem,2.5rem);
      
     padding:0 1rem;
 }
 
 .bmi .section{
-    --itemWidth:min(30vw,10rem);
+    --itemWidth:min(8.5vw,9rem);
+    --itemhw:min(3.9rem,4.5vw);
+    --value:min(2rem,2vw);
+    --font:clamp(1rem,1vw,1.5rem);
+     
     display:flex;
     align-items: centre;
     justify-content: center;
@@ -44,6 +48,8 @@
     flex-wrap: wrap;
     flex-direction: row;
 }
+
+
 
 .bmi .section .itemt1{
     position: relative;
@@ -54,28 +60,27 @@
     gap:1rem;
     width:var(--itemWidth);
     height:var(--itemWidth);
-    background-color: ivory;
+    background-color: var(--light);
      
     border-radius: 0.2rem;
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
-.bmi .section .itemt1 h3{
-    font-size: 1.5rem;
-     
-    
-    
-    
-}
+
+
+
+
+
+ 
 
 .bmi .section .itemt1 h4{
-    font-size: 1.5rem;
-    min-width:2rem;
+    font-size:  var(--font);
+    min-width:var(--value);
     display: flex;
     align-items: center;
     justify-content: center;
     gap:0.2rem;
-    background-color: rgba(235, 72, 120, 0.507);
+    background-color:var(--secondary-light);
 
      
     padding:0.2rem 0.2rem;
@@ -87,6 +92,7 @@
     margin: 0.5rem 1rem;
 }
  .bmi .section .itemt2{
+    --font2:clamp(1rem,1vw,1.5rem);
     width:calc(2*var(--itemWidth));
     height:var(--itemWidth);
     display:flex;
@@ -112,7 +118,7 @@
     justify-content:center;
      
     border-radius: 0.2rem;
-    background-color: ivory;
+    background-color: var(--light);
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
     
 }
@@ -124,7 +130,7 @@
     align-items: center;
     justify-content:flex-start;
      
-    background-color: ivory;
+    background-color:  var(--light);
      
     border-radius: 0.2rem;
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
@@ -137,11 +143,11 @@
     flex:1;
     height:100%;
     width: max-content;
-    background-color: rgba(255, 163, 182, 1);
+    background-color:var( --secondary-dark);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: clamp(1rem,4vw,1.5rem);
+    font-size: var(--font2);
      
      
     font-weight: 150;
@@ -151,8 +157,8 @@
 .bmi .section .itemt2 .item2 .v{
     flex:2;
      
-     width: max-content;
-    font-size: clamp(1rem,4vw,1.5rem);
+    width: max-content;
+    font-size: clamp(1rem,1vw,1.5rem);
     text-align: center;
 }
 
@@ -162,21 +168,21 @@
     margin:0 0.5rem;
      
     font-weight: 150;
-    font-size: 1.5rem;
+    font-size: var(--font2);
 }
 
 
 
 .bmi .section .itemt2 .item1 .v {
-    height: 2.5rem;
-    width:2.5rem;
-    margin:0 0.5rem;
-    font-size: 2rem;
-    padding:0.2rem 0.2rem;
+    min-height: var(--value);
+    min-width: var(--value);
+     
+    font-size:  var(--font2);
+     
     display:flex;
     align-items:center;
     justify-content: center;
-    background-color: rgba(235, 72, 120, 0.507);
+    background-color: var(--secondary-light);
     border-radius: 50%;
 
 
@@ -194,27 +200,39 @@
 }
 
 .bmi .section .itemt3 div{
-    height: 3.75rem;
-    width:3.75rem;
-    background-image: url('../../assets/edit1.png');
+    height: var(--itemhw);
+    width: var(--itemhw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     
     background-size: cover;
-    background-color: black;
+    background-color: white;
     border-radius: 50%;
     
 }
 
+.bmi .section .itemt3 div i{
+    font-size: clamp(1rem,1.6vw,1.5rem);
+}
+
 
 .bmi .section1{
+    --size:min(4.37rem,3vw);
+    --arrow:min(1rem,0.8vw);
+    min-height: 45vh;
      
     display:grid;
-    min-height: 45vh;
-    width:100%;
-    grid-template-columns:1fr 3fr 1fr 2fr;
+     
+   
+    grid-template-columns:0.5fr 3fr 0.7fr 2fr 0.5fr;
     grid-template-rows: auto;
+    grid-column-gap: min(2rem,5%);
     
     
      
     margin-top:5%;
+    
     
     
 }
@@ -232,27 +250,40 @@
 .bmi .section1 .Lcon h3{
     
     font-weight: 400;
-    font-size: 4rem;
+    font-size:clamp(1.5rem,3.3vw,4rem);
     margin:1rem 0;
 }
 
 .bmi .section1 .Lcon h4{
     
     font-weight: 350;
-    font-size: 3rem;
+    font-size:  clamp(1.2rem,2.5vw,3rem);
     margin: 1rem 0;
+
+}
+
+.bmi .section1 .Lcon button{
+     
+    background:var(--dark);
+    color: white;
+    padding: 0.5rem 3%;
+    font-size:  clamp(1.2rem,2vw,3rem);
+    border-radius: 0.5rem;
+    outline: none;
+    margin:0.5rem 0;
+    border: 0px;
 
 }
 
 .bmi .section1 .Rcon h4{
      
-    font-size: 2.25rem;
+    font-size:clamp(1.2rem,2vw,2.5rem);
     font-weight: 300;
 }
 
 .bmi .section1 .Lcon h5{
     
-    font-size: 2.25rem;
+    font-size: clamp(1rem,2vw,2.5rem);
     margin: 1rem 0;
     font-weight: 300;
 }
@@ -266,6 +297,7 @@
 
 }
 .bmi .section1 .Rcon{
+  
     grid-column: 3/4;
     grid-row: 1/2;
     display: flex;
@@ -276,7 +308,7 @@
 
 .bmi .section1 .Rcon .idl{
      
-    height: 4.37rem;
+    height: var(--size);
     display: flex;
     gap:1.5rem;
     align-items: center;
@@ -285,7 +317,7 @@
 }
 
 .bmi .section1 .Rcon .idl .round{
-    width:4.37rem ;
+    width: var(--size);
     height:100% ;
      
     font-weight: 700;
@@ -295,20 +327,24 @@
     justify-content: center;
     border-radius: 50%;
      
-    background-color: ivory;
+    background-color: var(--light);
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
     
 }
 
+.bmi .section1 .Rcon .idl .round span{
+    font-size:clamp(1rem,1.6vw,1.5rem);
+}
+
 .bmi .section1 .Rcon .idl .wgts{
     height:100%;
-    width: 11.4rem;
-    font-size: 2.25rem;
+    width: max-content;
+    font-size:  clamp(1rem,2vw,2.5rem);
     position: relative;
     
     display: flex;
     align-items: center;
-    background-color: ivory;
+    background-color: var(--light);
     padding: 0 0.5rem;
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 
@@ -319,15 +355,68 @@
     content: "";
     height: 0;
     width: 0;
-    border-top: 1rem solid transparent;
-    border-left: 1rem solid transparent;
-    border-right: 1rem solid white;
-    border-bottom: 1rem solid transparent;
+    border-top:var(--arrow) solid transparent;
+    border-left: var(--arrow) solid transparent;
+    border-right: var(--arrow) solid white; 
+    border-bottom: var(--arrow) solid transparent;
     right:100%;
      
 
     
 
+}
+
+
+@media screen and (max-width: 1300px) and (min-width:1000px)
+ {
+     .bmi .section{
+         --itemWidth:7rem;
+         --itemhw:min(2.6rem,4.5vw);
+         --value:1.4rem;
+     }
+
+     .bmi .section1 {
+         --size:2.6rem;
+     }
+}
+
+@media screen and (max-width:999px)
+{
+    .bmi .section {
+        --itemWidth:6.6rem;
+        --itemhw:2.2rem;
+         --value:1.4rem;
+    }
+
+    .bmi .hdng span{
+        height: 2.75rem;
+        width:0.5rem;
+    }
+
+    .bmi .section1 {
+        --size:2.3rem;
+        --arrow:0.5rem;
+    }
+}
+
+@media screen and (max-width:700px){
+    .bmi .section1{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap:1rem;
+    }
+
+    .bmi .section1 .L{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .bmi .section1 .R{
+        grid-column: 1/2;
+        grid-row:2/3
+    }
+
+    
 }
 
 

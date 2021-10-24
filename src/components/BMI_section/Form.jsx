@@ -146,9 +146,9 @@ const Form = ({ handleModal, setValues, values }) => {
                     <h4>Age</h4>
                 </div>
                 <div className="grid22">
-                    <span onClick={decrement1}>-</span>
+                    <i class="fas fa-minus" onClick={decrement1}> </i>
                     <input type="number" onChange={(e) => { setAge(e.target.value) }} id="Input1" value={age} min="1"></input>
-                    <span onClick={increment1} >+</span>
+                    <i class="fas fa-plus" onClick={increment1}> </i>
                 </div>
                 <div className="gridm2">
                     <h4>:</h4>
@@ -159,9 +159,9 @@ const Form = ({ handleModal, setValues, values }) => {
                     <h4>Weight (Kg)</h4>
                 </div>
                 <div className="grid32">
-                    <span onClick={decrement2} >-</span>
+                    <i class="fas fa-minus" onClick={decrement2}> </i>
                     <input type="number" id="Input2" onChange={(e) => { setWeight(e.target.value) }} value={weight} min='1'></input>
-                    <span onClick={increment2} >+</span>
+                    <i class="fas fa-plus" onClick={increment2}> </i>
 
                 </div>
                 <div className="gridm3">
@@ -172,9 +172,9 @@ const Form = ({ handleModal, setValues, values }) => {
                     <h4>Height (cm)</h4>
                 </div>
                 <div className="grid42">
-                    <span onClick={decrement3}>-</span>
+                    <i class="fas fa-minus" onClick={decrement3}> </i>
                     <input type="number" id="Input3" onChange={(e) => { setHeight(e.target.value) }} value={height} min='1'></input>
-                    <span onClick={increment3}>+</span>
+                    <i class="fas fa-plus" onClick={increment3}> </i>
                 </div>
                 <div className="gridm4">
                     <h4>:</h4>

@@ -43,6 +43,7 @@ export default function Bmi() {
                         <h3>You Are At <span> {bmi.health} </span></h3>
                         <h4>With BMI Value <span> {bmi.bmi} </span></h4>
                         <h5>by maintaining a healthy weight you lower your risk of serious healthy problems</h5>
+                        <button>Get BMR</button>
 
                     </div>
                 </div>

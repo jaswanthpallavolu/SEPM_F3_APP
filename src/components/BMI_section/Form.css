@@ -112,6 +112,9 @@
 .grid22 .im{
     font-size: 1rem;
 }
+.grid22 i,.grid32 i,.grid42 i{
+    cursor: pointer;
+}
 
  .grid22 input, .grid32 input ,.grid42 input{
    
@@ -227,4 +230,17 @@
     display:flex;
     align-items:center;
     justify-content:center;
+}
+
+@media screen and (max-width:550px) {
+    .grid51{
+        grid-column: 1/4;
+        grid-row: 5/6;
+    }
+
+    .grid52{
+        grid-column: 1/4;
+        grid-row: 6/7;
+    }
+    
 }
