@@ -68,7 +68,7 @@
 
   
 
-  .grid12 .male .img{
+  .grid12 .male .image{
      
       height: 2rem;
       width: 2rem;
@@ -78,7 +78,7 @@
        
   }
 
-  .grid12 .female .img{
+  .grid12 .female .image{
       height:2rem;
       width:2rem;
       background-image: url('../../assets/female.png');

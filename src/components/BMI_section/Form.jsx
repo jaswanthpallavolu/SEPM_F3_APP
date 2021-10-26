@@ -131,11 +131,11 @@ const Form = ({ handleModal, setValues, values }) => {
 
                 <div className="grid12" onClick={(e) => { handle(e) }}>
                     <div className="male" id="male" >
-                        <div className="img" id="Male"></div>
+                        <div className="image" id="Male"></div>
 
                     </div>
                     <div className="female" id="female" >
-                        <div className="img" id="Female" ></div>
+                        <div className="image" id="Female" ></div>
                     </div>
                 </div>
                 <div className="gridm1">
