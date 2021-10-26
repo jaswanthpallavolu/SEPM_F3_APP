@@ -22,7 +22,7 @@ export default function Navbar() {
                         <NavLink to="/home/cal_calc" activeClassName="menu_act" className="link"> calorie calc </NavLink>
                         <NavLink to="/home/nutrition" activeClassName="menu_act" className="link"> nutrition </NavLink>
                         <NavLink to="/home/fitness" activeClassName="menu_act" className="link"> fitness </NavLink>
-                        <NavLink to="/home/fitness/exercise" activeClassName="menu_act" className="link"> exercise </NavLink>
+
 
                     </div>
                     <div id="head" className="head">Menu</div>
