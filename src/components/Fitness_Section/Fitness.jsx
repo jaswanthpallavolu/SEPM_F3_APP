@@ -1,6 +1,6 @@
 import React from 'react';
 import './fitness_a.css';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom"; //eslint-disable-line
 import { useHistory } from 'react-router';
 
 export default function Fitness() {
