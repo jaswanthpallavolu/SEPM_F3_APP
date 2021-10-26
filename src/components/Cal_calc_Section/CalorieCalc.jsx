@@ -1,13 +1,16 @@
 import './cal_cal.css';
 import React from 'react';
 import axios from 'axios';
+ 
 import { useState } from 'react';
 
 function CalorieCalc() {
     const [query, setquery] = useState("");
+ 
     const [info, setInfo] = useState("");
     const [err, setErr] = useState(false);
 
+ 
     const fetchData = async (e) => {
         e.preventDefault()
         var options = {
@@ -21,13 +24,16 @@ function CalorieCalc() {
         }
 
         await axios.request(options)
+ 
             .then(result => { setErr(false); setInfo(result.data.parsed[0].food) })
             .catch(err => { setErr(true); setInfo(''); })
-
+ 
     }
+
 
     return (
         <div className="calc_main">
+ 
             <div className="Heading">
 
                 <p>
@@ -92,6 +98,7 @@ function CalorieCalc() {
 
 
 
+ 
     );
 }
 export default CalorieCalc;
