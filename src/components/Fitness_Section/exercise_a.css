@@ -1,0 +1,30 @@
+.fitness_main .check_b{
+    background-image: url('../../assets/icons8-arrow-pointing-left-30.png');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    position: absolute;
+    left: 110px;
+    top: 270px;
+    font-size: 30px;
+    background-color: #651e6e;
+    border: none;
+    color: white;
+    padding: 20px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 5px 10px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.fitness_main .exercise_n{
+    position: absolute;
+    width: 260px;
+    height: 98px;
+    top: 270px;
+    left: 750px;
+    font-size: 20px;
+}
