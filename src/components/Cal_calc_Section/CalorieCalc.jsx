@@ -1,11 +1,16 @@
+import './cal_cal.css';
 import React from 'react';
 import axios from 'axios';
-import './cal_cal.css';
+ 
 import { useState } from 'react';
 
 function CalorieCalc() {
     const [query, setquery] = useState("");
-    const [info, setInfo] = useState([]); //eslint-disable-line
+ 
+    const [info, setInfo] = useState("");
+    const [err, setErr] = useState(false);
+
+ 
     const fetchData = async (e) => {
         e.preventDefault()
         var options = {
@@ -19,33 +24,81 @@ function CalorieCalc() {
         }
 
         await axios.request(options)
-            .then(result => setInfo(result.data.parsed))
-            .catch(err => console.log(err))
-
+ 
+            .then(result => { setErr(false); setInfo(result.data.parsed[0].food) })
+            .catch(err => { setErr(true); setInfo(''); })
+ 
     }
-
 
 
     return (
         <div className="calc_main">
+ 
+            <div className="Heading">
+
+                <p>
+                    <span id="bar">|</span>
+                    Calorie Calculator</p>
+            </div>
+
             <div className="calc">
-                <h1 onClick={fetchData}>Calorie Calculator 🧮</h1>
-
-                <div className="calc_searchform">
-                    <input
-                        type="text"
-                        className="calc_input"
-                        placeholder="Enter Ingredient"
-                        value={query}
-                        onChange={(e) => setquery(e.target.value)}
-                    />
-                    <button className="calc_submit" onClick={fetchData}>Search</button>
-                </div>
+                <input
+                    type="text"
+                    className="calc_input"
+                    placeholder="search for food, fruit, vegetable.."
+                    value={query}
+                    onChange={(e) => setquery(e.target.value)}
+                />
+                <button className="calc_submit" onClick={fetchData}><span className='fa fa-lg fa-search'></span></button>
             </div>
-
             <div>
+                {info ?
+                    <div className="infoTile">
+
+                        <img className="img" src={info.image} alt="" /><br />
+
+                        <div className="values">
+                            <h3 id="x">100g</h3>
+                            <h2>{info.label}</h2>
+
+                            <div className="calories">
+                                <p> Calories  {info.nutrients.ENERC_KCAL} KCal</p>
+
+                            </div>
+
+                            <div className="item">
+                                <p id="a">carbs   </p>
+                                <p id="a">fats   </p>
+                                <p id="a">fiber  </p>
+                                <p id="a">Protein  </p>
+                            </div>
+
+                            <div className="item_value">
+                                <p id="b">  {info.nutrients.CHOCDF}g </p>
+                                <p id="b">  {info.nutrients.FAT}g </p>
+                                <p id="b">  {info.nutrients.FIBTG}g </p>
+                                <p id="b"> {info.nutrients.PROCNT}g </p>
+                            </div>
+
+                        </div>
+                    </div>
+                    : <p></p>}
+
+
+                {err ?
+                    <div className="error">
+                        <h2>invalid Word!</h2>
+                        <h2>Please check your spelling</h2>
+                    </div>
+                    : ''}
             </div>
-        </div>
+
+
+        </div >
+
+
+
+ 
     );
 }
 export default CalorieCalc;
