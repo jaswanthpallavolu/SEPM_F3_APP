@@ -1,54 +1,32 @@
 .fitness_main{
     background-image:url(../../assets/blob1.png);
-    background-color:var(--primary-light);
+    background-color:var(--primary-dark);
     background-repeat: repeat;
     position: relative;
     background-attachment: fixed;
     background-size: 100% 100%;
-    height:180vh;
+    height:130vh;
+    
 }
-.fitness_main .heading{
-    position: absolute;
-    width: 260px;
-    height: 98px;
-    left: 110px;
-    top: 150px;
-    font-size: 25px;
+.fitness_main .coloum{
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+  
 }
+
 .fitness_main .line{
     color: blueviolet;
-    position: absolute;
-    width: 260px;
-    height: 98px;
-    left: 100px;
-    top: 150px;
-    font-size: 25px;
 }
+
 .fitness_main .heading_2{
-    position: absolute;
-    width: 260px;
-    height: 98px;
-    left: 130px;
-    top: 300px;
-    font-size: 25px;
+    
     color: #fff;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
-.fitness_main .p1{
-    position: absolute;
-    width: 1300px;
-    height: 98px;
-    left: 130px;
-    top: 380px;
-    font-size: 30px;
-}
+
 
 .fitness_main .b1{
-    position: absolute;
-    left: 130px;
-    top: 460px;
-    font-family: roberto;
-    font-size: 30px;
     background-color: #651e6e;
     border: none;
     color: white;
@@ -56,17 +34,11 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 20px;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 15px;
 }
 .fitness_main .b2{
-    position: absolute;
-    left: 650px;
-    top: 460px;
-    font-family: roberto;
-    font-size: 30px;
     background-color: #651e6e;
     border: none;
     color: white;
@@ -74,16 +46,11 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 20px;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 15px;
 }
 .fitness_main .b3{
-    position: absolute;
-    left: 360px;
-    top: 460px;
-    font-size: 30px;
     background-color: #651e6e;
     border: none;
     color: white;
@@ -91,37 +58,20 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 20px;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 15px;
 }
 
 .fitness_main .heading_3{
-    position: absolute;
-    width: 260px;
-    height: 98px;
-    left: 130px;
-    top: 580px;
-    font-size: 25px;
+    
     color: #fff;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
-.fitness_main .p2{
-    position: absolute;
-    width: 1300px;
-    height: 98px;
-    left: 130px;
-    top: 660px;
-    font-size: 30px;
-}
 
 .fitness_main .b4{
-    position: absolute;
-    left: 130px;
-    top: 780px;
-    font-size: 30px;
+    
     background-color: #651e6e;
     border: none;
     color: white;
@@ -129,16 +79,12 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 20px;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 15px;
 }
 .fitness_main .b5{
-    position: absolute;
-    left: 250px;
-    top: 780px;
-    font-size: 30px;
+    
     background-color: #651e6e;
     border: none;
     color: white;
@@ -146,16 +92,12 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 20px;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 15px;
 }
 .fitness_main .b6{
-    position: absolute;
-    left: 500px;
-    top: 780px;
-    font-size: 30px;
+    
     background-color: #651e6e;
     border: none;
     color: white;
@@ -163,36 +105,20 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 20px;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 15px;
 }
 
 .fitness_main .heading_4{
-    position: absolute;
-    width: 260px;
-    height: 98px;
-    left: 130px;
-    top: 900px;
-    font-size: 25px;
+    
     color: #fff;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
-.fitness_main .p3{
-    position: absolute;
-    width: 1300px;
-    height: 98px;
-    left: 130px;
-    top: 980px;
-    font-size: 30px;
-}
+
 .fitness_main .b7{
-    position: absolute;
-    left: 130px;
-    top: 1110px;
-    font-size: 30px;
+    
     background-color: #651e6e;
     border: none;
     color: white;
@@ -200,16 +126,12 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 20px;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 15px;
 }
 .fitness_main .b8{
-    position: absolute;
-    left: 305px;
-    top: 1110px;
-    font-size: 30px;
+    
     background-color: #651e6e;
     border: none;
     color: white;
@@ -217,17 +139,12 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 20px;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 15px;
 }
 .fitness_main .b9{
-    position: absolute;
-    left: 480px;
-    top: 1110px;
-    font-family: roberto;
-    font-size: 30px;
+    
     background-color: #651e6e;
     border: none;
     color: white;
@@ -235,9 +152,38 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 20px;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 15px;
+}
+
+.fitness_main .button{
+    display: flex;
+    flex-direction: row;
+}
+
+.fitness_main .cc{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 25px;
+}
+
+.fitness_main .container{
+    
+    position: absolute;
+    top: 100px;
+    left: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.fitness_main .info_1{
+    
+    margin-bottom: 25px;
+}
+
+.fitness_main .info_2{
+    
+    margin-bottom: 25px;
 }
 
