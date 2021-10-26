@@ -22,9 +22,7 @@ export default function Nutrition() {
             <li>Complex Carbs</li>
             <li>High protien</li>
             <li>Low fat</li>
-            <li> Vitamins&nbsp; &nbsp; <i class="arrow down"></i><ul>
-                
-               <li> Vitamin A</li></ul></li>
+            <li> Vitamins&nbsp; &nbsp; <i class="arrow down"></i></li>
             
                     
         </ul>
