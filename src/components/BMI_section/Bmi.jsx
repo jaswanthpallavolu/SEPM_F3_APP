@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { CircularProgress } from '@mui/material/'
 
 
 import './Bmi.css';
@@ -23,6 +24,9 @@ export default function Bmi() {
         miller: ""
     })
 
+    const [loading1, setLoading1] = useState()
+    const [loading2, setLoading2] = useState()
+
     return (
 
         <div className="bmi">
@@ -32,7 +36,7 @@ export default function Bmi() {
                 <h3>BMI</h3>
             </div>
 
-            <Main setBmi={setBmi} setIdl={setIdl} />
+            <Main setBmi={setBmi} setIdl={setIdl} setLoading1={setLoading1} setLoading2={setLoading2} />
 
             <div className="section1">
                 <div className="L">
@@ -40,8 +44,8 @@ export default function Bmi() {
 
 
                     <div className="Lcon">
-                        <h3>You Are At <span> {bmi.health} </span></h3>
-                        <h4>With BMI Value <span> {bmi.bmi} </span></h4>
+                        <h3>You Are At <span> {loading1 ? <CircularProgress color='primary' /> : bmi.health}</span></h3>
+                        <h4>With BMI Value <span> {loading1 ? <CircularProgress color='primary' /> : bmi.bmi}</span></h4>
                         <h5>by maintaining a healthy weight you lower your risk of serious healthy problems</h5>
                         <button>Get BMR</button>
 
@@ -51,10 +55,11 @@ export default function Bmi() {
                 <div className="R">
 
                     <div className="Rcon">
+
                         <h4>ideal weights (kg)</h4>
                         <div className="idl">
                             <div className="round">
-                                <span>{idl.hamwi}</span>
+                                <span> {loading2 ? <CircularProgress color='primary' /> : idl.hamwi}</span>
                             </div>
                             <div className="wgts">
                                 <span>Hamwi</span>
@@ -64,7 +69,7 @@ export default function Bmi() {
 
                         <div className="idl">
                             <div className="round">
-                                <span>{idl.devine}</span>
+                                <span>{loading2 ? <CircularProgress color='primary' /> : idl.devine}</span>
                             </div>
                             <div className="wgts">
                                 <span>Devine</span>
@@ -74,7 +79,7 @@ export default function Bmi() {
 
                         <div className="idl">
                             <div className="round">
-                                <span>{idl.robinson}</span>
+                                <span>{loading2 ? <CircularProgress color='primary' /> : idl.robinson}</span>
                             </div>
                             <div className="wgts">
                                 <span>Robinson</span>
@@ -84,7 +89,7 @@ export default function Bmi() {
 
                         <div className="idl">
                             <div className="round">
-                                <span>{idl.miller}</span>
+                                <span>{loading2 ? <CircularProgress color='primary' /> : idl.miller}</span>
                             </div>
                             <div className="wgts">
                                 <span >Miller</span>

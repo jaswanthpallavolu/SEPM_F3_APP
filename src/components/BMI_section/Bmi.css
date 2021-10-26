@@ -92,7 +92,7 @@
     margin: 0.5rem 1rem;
 }
  .bmi .section .itemt2{
-    --font2:clamp(1rem,1vw,1.5rem);
+    --font2:clamp(1rem,1.3vw,1.5rem);
     width:calc(2*var(--itemWidth));
     height:var(--itemWidth);
     display:flex;
@@ -110,7 +110,7 @@
     width:100%;
     height:calc(3/4*(var(--itemWidth)));
      
-    font-weight: 150;
+    font-weight: 300;
 
     
     display: flex;
@@ -148,9 +148,10 @@
     align-items: center;
     justify-content: center;
     font-size: var(--font2);
+
      
      
-    font-weight: 150;
+    font-weight: 500;
     border-radius: 0.2rem 0 0 0.2rem;
 }
 
@@ -167,7 +168,7 @@
 .bmi .section .itemt2 .item1 h3 {
     margin:0 0.5rem;
      
-    font-weight: 150;
+    font-weight: 500;
     font-size: var(--font2);
 }
 

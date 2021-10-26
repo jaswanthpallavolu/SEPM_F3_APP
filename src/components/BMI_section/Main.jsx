@@ -4,7 +4,7 @@ import { Modal, Fade, Box, Backdrop } from '@mui/material'
 import Form from './Form'
 import axios from 'axios';
 
-const Main = ({ setBmi, setIdl }) => {
+const Main = ({ setBmi, setIdl, setLoading1, setLoading2 }) => {
 
 
     const [values, setValues] = useState({
@@ -25,7 +25,7 @@ const Main = ({ setBmi, setIdl }) => {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        width: 'min(25rem,70%)',
+        width: 'maxContent',
         bgcolor: 'background.paper',
         border: '1px solid #000',
         boxShadow: 20,
@@ -48,14 +48,20 @@ const Main = ({ setBmi, setIdl }) => {
         };
 
         axios.request(options).then(function (response) {
-            console.log(response.data);
-            const res = JSON.parse(JSON.stringify(response))
+
+
 
 
             setBmi({
-                bmi: Number(res.data.bmi).toFixed(2),
-                health: res.data.health,
+                bmi: Number(response.data.data.bmi).toFixed(2),
+                health: response.data.data.health,
             })
+
+            setLoading1(false)
+
+
+
+
 
 
 
@@ -79,19 +85,25 @@ const Main = ({ setBmi, setIdl }) => {
         };
 
         axios.request(options).then(function (response) {
-            console.log(response.data);
-            const res = JSON.parse(JSON.stringify(response))
 
 
 
-            console.log(Number(res.data.Hamwi).toFixed(2))
+
+
+
+
+
+
+
 
             setIdl({
-                hamwi: Number(res.data.Hamwi).toFixed(),
-                devine: Number(res.data.Devine).toFixed(),
-                robinson: Number(res.data.Robinson).toFixed(),
-                miller: Number(res.data.Miller).toFixed()
+                hamwi: Number(response.data.data.Hamwi).toFixed(),
+                devine: Number(response.data.data.Devine).toFixed(),
+                robinson: Number(response.data.data.Robinson).toFixed(),
+                miller: Number(response.data.data.Miller).toFixed()
             })
+
+            setLoading2(false)
 
 
         }).catch(function (error) {
@@ -102,8 +114,12 @@ const Main = ({ setBmi, setIdl }) => {
 
 
     useEffect(() => {
+        setLoading1(true)
+        setLoading2(true)
         request1()
         request2()
+
+
 
 
     }, [values])//eslint-disable-line react-hooks/exhaustive-deps 
@@ -150,7 +166,7 @@ const Main = ({ setBmi, setIdl }) => {
                 </div>
 
                 <div className="itemt3">
-                    <div onClick={() => setOpen(true)}><i class="fas fa-pen"></i></div>
+                    <div onClick={() => setOpen(true)}><i className="fas fa-pen"></i></div>
                     <Modal
                         aria-labelledby="transition-modal-title"
                         aria-describedby="transition-modal-description"
