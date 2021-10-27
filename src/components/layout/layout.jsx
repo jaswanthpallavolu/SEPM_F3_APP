@@ -13,15 +13,13 @@ export default function Layout() {
     return (
         <>
             <Navbar />
-            <div className="container">
-
+            <div className="container"  >
                 <Route exact path='/home' component={Landing} />
                 <Route path='/home/bmi' component={Bmi} />
                 <Route path='/home/cal_calc' component={CalorieCalc} />
                 <Route path='/home/nutrition' component={Nutrition} />
                 <Route path='/home/fitness' component={Fitness} />
                 <Route path='/home/exercise' component={exercise} />
-
             </div>
         </>
     )
