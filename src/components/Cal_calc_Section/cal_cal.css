@@ -9,70 +9,99 @@
     background-attachment: fixed;
     background-size: 100% 100%;
     height:100vh;
+    width:100vw;
 }
 
  
-#bar{
-    font-size: 70px;
-    color: purple;
-    font-weight: bold;
-}
+ 
 
 .Heading{
-    padding-left: 70px;
-    padding-top: 70px;
-    font-size: 40px;
-     
+    position: relative;
+    top:5rem;
+    left:5vw;
+    width:max-content;
+    font-size: 2.5rem; 
+}
+.Heading::before{
+    position: absolute;
+    left:-1rem;
+    content: '';
+    display: block;
+    width:.4rem;
+    height: 100%;
+   
+    background: var(--primary);
 }
 
-.calc{ 
+/* CONTENT */
+.calc_main .content{
+    position: relative;
+    top:20%;
     display: flex;
-    flex-direction:row; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:5vh;
+}
+
+/* SEARCH BAR */
+.calc_main form{
+    display: flex; 
+    justify-content: center;
+      
+}
+.calc_main .searchbar{ 
+    padding: .2rem 1rem;
+    display: flex;
     justify-content: center;    
-    align-items: center;  
-    padding: 50px 100px;
+    align-items:baseline;  
+    gap:.5rem;
+    background: var(--light);
+    width: max-content;
+
+    box-shadow: 0 2px 3px rgba(0,0,0,0.25);
+}
+
+.searchbar input{
+    width: 20rem;
+    height:2rem;
+    
+    background: none;
+    border: none;
+
+    font-size: 1.1rem;
+}
+.searchbar input:focus{
+    outline: none;
+}
+.searchbar button{
+    border:none;
+    background: none;
 }
 
 
-.calc_input{
-    width: 350px;
-    height:30px;
-    background-color: white;
-    border-color:white;
-    border-radius: 4px solid white;
-    
-    
-}
 
-::placeholder {
-    padding-left: 18px;
-    font-size: 15px;
+/* RESULT */
+.calc_main .result{
+    display: grid;
+    place-items:center;
 }
-
-.calc_submit{
-    background-color:solid white;
-    height:33px;
-    width: 50px;
-    margin-left:-50px;
-    background: transparent;
-    
-    
-
-}
-.infoTile{
-    border:2px solid white;
-    background-color: white;
-    margin : 0px 300px;
-    height: 230px;
+.calc_main .infoTile{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    padding: .6rem;
+    background: var(--light);
     border-radius: 10px;   
 }
-.img{
-    width:170px;
-    height: 200px;
-    float: left;
-    border:2px solid rgba(255, 255, 255, 0.644);
+.calc_main .img{
+    width: 15rem;
+    aspect-ratio: 1/1;
+     
+     
     border-radius: 10px;
-    margin: 13px 15px;
+    box-shadow: 0 0px 2px rgba(0,0,0,0.25);
+    
     
 }
 
@@ -88,31 +117,33 @@
     width: 75px;
 }
 
-.values{
+.calc_main .values{
     float: left;
     padding: 10px 7px;
 }
-.calories{
+.calc_main .calories{
     height:25px;
-    width: 165px;
+    width: max-content;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    padding: 1rem;
     margin: 20px 0px;
-    font-size: 20px;
-    border: 2px solid purple   ;
-    border-radius:7px;
+    font-size: 1.3rem;
+    border: 2px solid  var(--primary) ;
+    border-radius:5px;
     
 }
 
-.item{
+.calc_main .item{
     display: flex;
     flex-direction:row; 
     justify-content: center;    
     align-items: center;  
 }
 
-.item_value{
+.calc_main .item_value{
     display: flex;
     flex-direction:row; 
     justify-content: center;    
@@ -121,7 +152,7 @@
 }
 
 #a{
-    border: 0px solid purple ;
+    border: 0px solid var(--primary) ;
     height: 20px;
     width: 50px;
     display: flex;
@@ -142,16 +173,7 @@
     margin: 0px 10px;
 }
 
-.error{
-    border:2px solid white;
-    background-color: white;
-    margin : 0px 300px;
-    height: 55px;
-    border-radius: 10px;   
-    display: flex;
-    justify-content: center;
-    flex-direction:column; 
-    align-items: center;
-    
- 
+.calc_main .error{
+    margin-top: 5vh;
+    font-size: 2rem;
 }
