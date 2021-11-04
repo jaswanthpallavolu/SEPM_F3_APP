@@ -8,7 +8,6 @@ import { CircularProgress } from '@mui/material'
 function CalorieCalc() {
     const [query, setquery] = useState("");
     const [loading, setLoading] = useState(false);
-
     const [info, setInfo] = useState("");
     const [err, setErr] = useState(false);
 
@@ -63,7 +62,7 @@ function CalorieCalc() {
                                 <img className="img" src={info.image} alt="" /><br />
                                 <div className="values">
                                     <h3 id="x">100g</h3>
-                                    <h2>{info.label}</h2>
+                                    <h2 id="y">{info.label}</h2>
 
                                     <div className="calories">
                                         <p> Calories  {info.nutrients.ENERC_KCAL} KCal</p>
@@ -71,9 +70,9 @@ function CalorieCalc() {
                                     </div>
 
                                     <div className="item">
-                                        <p id="a">carbs   </p>
-                                        <p id="a">fats   </p>
-                                        <p id="a">fiber  </p>
+                                        <p id="a">Carbs   </p>
+                                        <p id="a">Fats   </p>
+                                        <p id="a">Fiber  </p>
                                         <p id="a">Protein  </p>
                                     </div>
 
