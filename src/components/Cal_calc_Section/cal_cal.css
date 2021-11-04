@@ -16,6 +16,7 @@
     width:max-content;
     font-size: 2.5rem; 
 }
+
 .Heading::before{
     position: absolute;
     left:-1rem;
@@ -42,6 +43,7 @@
     display: flex; 
     justify-content: center; 
 }
+
 .calc_main .searchbar{ 
     padding: .2rem 1rem;
     display: flex;
@@ -56,10 +58,8 @@
 .searchbar input{
     width: 20rem;
     height:2rem;
-    
     background: none;
     border: none;
-
     font-size: 1.1rem;
 }
 .searchbar input:focus{
@@ -81,6 +81,7 @@
     display: grid;
     place-items:center;
 }
+
 .calc_main .infoTile{
     display: flex;
     align-items: center;
@@ -89,6 +90,7 @@
     background: var(--light);
     border-radius: 1.5vw;   
 }
+
 .calc_main .img{
     width: 15rem;
     aspect-ratio: 1/1;
@@ -124,7 +126,6 @@
     font-size: 1.3rem;
     border: 2px solid  var(--primary) ;
     border-radius:5px;
-    
 }
 
 .calc_main .item{
@@ -139,7 +140,6 @@
     flex-direction:row; 
     justify-content: center;    
     align-items: center;    
-
 }
 
 #a{
@@ -236,6 +236,7 @@
         display: grid;
         place-items:center;
     }
+
     .calc_main .infoTile{
         display: flex;
         align-items: center;
@@ -244,12 +245,14 @@
         background: var(--light);
         border-radius: 0.5rem;   
     }
+
     .calc_main .img{
         width: 38vw;
         aspect-ratio: 1/1;
         border-radius: 0.5vw; 
         padding : 1vw 1vw;
     }
+
     #x{
         float: right;
         display: flex;
@@ -260,8 +263,6 @@
         box-shadow: 0px 0px 1.5px 1.5px grey;
          
     }
-
-
 
     .calc_main .values{
         float: left;
@@ -278,9 +279,9 @@
         margin: 3vw 0vw;
         font-size: 4vw;
         border: .15rem solid  var(--primary) ;
-        border-radius: 5px;
-        
-    }    
+        border-radius: 5px; 
+    }  
+
     #a{
         padding-top: 2vw;
         height:3vw;
@@ -297,7 +298,6 @@
     }
     
     #b{
-        
         border-radius: 50%;
         height: 11vw;
         width: 11vw;
@@ -305,9 +305,9 @@
         font-size: 3vw;
         box-shadow: 0vw 0vw .5vw .5vw rgba(194, 188, 188, 0.938);
     }
+    
     .calc_main .error{
         margin-top: 5vh;
         font-size: 2rem;
-    }
-    
+    }   
 }
