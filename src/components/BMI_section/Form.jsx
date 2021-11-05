@@ -193,10 +193,9 @@ const Form = ({ handleModal, setValues, values }) => {
                 <div className="grid52">
                     <h4>Goal</h4>
                     <select onChange={(e) => { setGoal(e.target.value) }} value={goal}>
-                        <option>WeightLoss</option>
-                        <option>WeightGain</option>
-                        <option>Other</option>
-
+                        <option>weightlose</option>
+                        <option>weightgain</option>
+                        <option>maintain</option>
                     </select>
 
                 </div>

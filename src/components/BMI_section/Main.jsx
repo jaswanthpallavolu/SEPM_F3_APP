@@ -3,19 +3,11 @@ import { Modal, Fade, Box, Backdrop } from '@mui/material'
 
 import Form from './Form'
 import axios from 'axios';
+import { useOurContext } from '../../Context/Context';
 
 const Main = ({ setBmi, setIdl, setLoading1, setLoading2 }) => {
-
-
-    const [values, setValues] = useState({
-        height: 180,
-        weight: 60,
-        age: 24,
-        gender: 'male',
-        al: 5,
-        goal: 'Weight Loss'
-
-    })
+    const { bmi_section } = useOurContext()
+    const { values, setValues } = bmi_section
 
     const [open, setOpen] = useState(false);
     const handleModal = () => setOpen(!open);
@@ -48,22 +40,12 @@ const Main = ({ setBmi, setIdl, setLoading1, setLoading2 }) => {
         };
 
         axios.request(options).then(function (response) {
-
-
-
-
             setBmi({
                 bmi: Number(response.data.data.bmi).toFixed(2),
                 health: response.data.data.health,
             })
 
             setLoading1(false)
-
-
-
-
-
-
 
         }).catch(function (error) {
             console.error(error);
@@ -85,16 +67,6 @@ const Main = ({ setBmi, setIdl, setLoading1, setLoading2 }) => {
         };
 
         axios.request(options).then(function (response) {
-
-
-
-
-
-
-
-
-
-
 
             setIdl({
                 hamwi: Number(response.data.data.Hamwi).toFixed(),
