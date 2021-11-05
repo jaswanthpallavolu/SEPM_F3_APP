@@ -94,8 +94,8 @@
 .calc_main .img{
     width: 15rem;
     aspect-ratio: 1/1;
-    border-radius: 1vw; 
-    padding : 10px 10px;
+    border-radius: 1rem; 
+    padding : 5px 5px;
 }
 
 #x{
@@ -241,16 +241,17 @@
         display: flex;
         align-items: center;
         gap:0vw;
-        padding: 2vw;
+        padding: 1vw 1vw 1vw 2vw ;
         background: var(--light);
         border-radius: 0.5rem;   
     }
 
     .calc_main .img{
-        width: 38vw;
+        width: 35vw;
         aspect-ratio: 1/1;
-        border-radius: 0.5vw; 
-        padding : 1vw 1vw;
+        border-radius: 2.5vw; 
+        padding : 0vw 0vw;
+        margin-right: 2vw;
     }
 
     #x{
@@ -260,7 +261,8 @@
         align-items: center;
         font-size: 3vw;
         width: 15vw; 
-        box-shadow: 0px 0px 1.5px 1.5px grey;
+        box-shadow: 0px 0px 0.25vw 0.25vw grey;
+        margin-top: 1vw;
          
     }
 
@@ -271,14 +273,14 @@
     
     .calc_main .calories{
         height: 2vw;
-        width: 35vw;
+        width: 36vw;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 3vw 1vw;
         margin: 3vw 0vw;
         font-size: 4vw;
-        border: .15rem solid  var(--primary) ;
+        border: .4vw solid  var(--primary) ;
         border-radius: 5px; 
     }  
 
@@ -295,6 +297,7 @@
 
     #y{
         font-size: 4vw;
+        margin-top: 2vw;
     }
     
     #b{
