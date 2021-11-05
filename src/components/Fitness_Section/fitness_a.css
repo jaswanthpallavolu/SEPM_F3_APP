@@ -3,152 +3,37 @@
     background-color:var(--primary-dark);
     background-repeat: repeat;
     position: relative;
-    background-attachment: fixed;
     background-size: 100% 100%;
-    height:130vh;
+    height:200vh;
     
 }
-.fitness_main .coloum{
-    display: flex;
-    flex-direction: column;
-    line-height: 30px;
-  
+
+.fitness_main .heading::before{
+    position: absolute;
+    left:-1rem;
+    content: '';
+    display: block;
+    width:.4rem;
+    height: 3rem;
+   
+    background: var(--primary);
 }
 
-.fitness_main .line{
-    color: blueviolet;
-}
+
 
 .fitness_main .heading_2{
     
     color: #fff;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    margin-bottom: 1rem;
 }
 
 
 .fitness_main .b1{
-    background-color: #651e6e;
+    background-color:var(--dark);
     border: none;
     color: white;
     padding: 20px 60px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 15px;
-}
-.fitness_main .b2{
-    background-color: #651e6e;
-    border: none;
-    color: white;
-    padding: 20px 60px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 15px;
-}
-.fitness_main .b3{
-    background-color: #651e6e;
-    border: none;
-    color: white;
-    padding: 20px 60px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 15px;
-}
-
-.fitness_main .heading_3{
-    
-    color: #fff;
-    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
-}
-
-
-.fitness_main .b4{
-    
-    background-color: #651e6e;
-    border: none;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 15px;
-}
-.fitness_main .b5{
-    
-    background-color: #651e6e;
-    border: none;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 15px;
-}
-.fitness_main .b6{
-    
-    background-color: #651e6e;
-    border: none;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 15px;
-}
-
-.fitness_main .heading_4{
-    
-    color: #fff;
-    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
-}
-
-
-.fitness_main .b7{
-    
-    background-color: #651e6e;
-    border: none;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 15px;
-}
-.fitness_main .b8{
-    
-    background-color: #651e6e;
-    border: none;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 15px;
-}
-.fitness_main .b9{
-    
-    background-color: #651e6e;
-    border: none;
-    color: white;
-    padding: 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -160,30 +45,33 @@
 .fitness_main .button{
     display: flex;
     flex-direction: row;
+    margin-top: 1rem;
+    gap: 1rem;
+    
 }
 
 .fitness_main .cc{
     display: flex;
     flex-direction: row;
-    margin-bottom: 25px;
 }
 
 .fitness_main .container{
     
     position: absolute;
-    top: 100px;
-    left: 150px;
+    top: 7rem;
+    left: 5rem;
+    width: 63rem;
     display: flex;
     flex-direction: column;
+    font-size: clamp();
 }
 
-.fitness_main .info_1{
-    
-    margin-bottom: 25px;
+.fitness_main .info_1{    
+    margin-bottom: 4rem;
 }
 
-.fitness_main .info_2{
-    
-    margin-bottom: 25px;
+.fitness_main .info{
+    position: absolute;
+    top: 7rem;
+    left: 1rem;
 }
-
