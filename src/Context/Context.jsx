@@ -19,7 +19,6 @@ export function ContextProvider({ children }) {
         gender: 'male',
         al: 5,
         goal: 'weightlose'
-
     })
 
     const val1 = {

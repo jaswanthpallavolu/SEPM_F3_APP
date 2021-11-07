@@ -9,11 +9,10 @@ export default function Section1({ setToggleSection, bmi, loading1, loading2, id
                 <div className="Lcon">
                     {loading1 ? <CircularProgress color='primary' /> : <>
                         <h3>You Are At {bmi.health} </h3>
-                        <h4>With BMI Value <span> {bmi.bmi}</span></h4>
-                        <h5>by maintaining a healthy weight you lower your risk of serious healthy problems</h5>
+                        <h4>with BMI Value <span> {bmi.bmi}</span></h4>
+                        <h5>by maintaining a healthy weight you lower your risk of serious healthy problems. Healthy BMI range [18.5 - 24.9]</h5>
                         <button onClick={() => { setToggleSection(true) }} >Get BMR</button>
-                    </>
-                    }
+                    </>}
 
                 </div>
             </div>
@@ -73,6 +72,6 @@ export default function Section1({ setToggleSection, bmi, loading1, loading2, id
                 </div>
             </div>
 
-        </div>
+        </div >
     )
 }

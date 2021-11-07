@@ -36,7 +36,7 @@ export default function Bmi() {
 
                 <Main setBmi={setBmi} setIdl={setIdl} setLoading1={setLoading1} setLoading2={setLoading2} />
 
-                <div className="sections">
+                <div className="two_sections">
                     {!toggleSection ?
                         <Section1 loading1={loading1} loading2={loading2} idl={idl} bmi={bmi} setToggleSection={setToggleSection} />
                         : <BMR setToggleSection={setToggleSection} />}

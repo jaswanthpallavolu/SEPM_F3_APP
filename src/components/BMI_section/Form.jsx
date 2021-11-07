@@ -1,13 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react'
-import { Button } from '@mui/material'
 import './Form.css';
 
-
-
 const Form = ({ handleModal, setValues, values }) => {
-
-
-
     const [age, setAge] = useState(values.age)
     const [weight, setWeight] = useState(values.weight)
     const [height, setHeight] = useState(values.height)
@@ -18,7 +12,7 @@ const Form = ({ handleModal, setValues, values }) => {
 
 
     function handleForm() {
-        setValues({
+        const uinfo = {
             height: height,
             weight: weight,
             age: age,
@@ -26,8 +20,9 @@ const Form = ({ handleModal, setValues, values }) => {
             al: al,
             goal: goal
 
-        })
-
+        }
+        window.localStorage.setItem('uinfo', JSON.stringify(uinfo))
+        setValues(uinfo)
         handleModal()
     }
 
@@ -117,7 +112,6 @@ const Form = ({ handleModal, setValues, values }) => {
 
     return (
         <>
-
             <div className="style2">
                 <h3>First, let us know you</h3>
                 <div className="close" onClick={handleModal}></div>
@@ -217,11 +211,10 @@ const Form = ({ handleModal, setValues, values }) => {
             </div>
 
             <div className="style3">
-                <Button variant="outlined" size='small' onClick={handleForm} disabled={(!(age)) || (!(height)) || (!(weight))}>save</Button>
+                <button onClick={handleForm} disabled={(!(age)) || (!(height)) || (!(weight))}>save</button>
             </div>
 
         </>
-
     )
 }
 

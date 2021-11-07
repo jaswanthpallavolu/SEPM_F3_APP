@@ -21,7 +21,7 @@
 .bmi .container{
     position: absolute;
     inset:0;
-    margin-top: 5%;
+    margin-top:min(25%,5rem);
 }
 .bmi .hdng{
     display: flex;
@@ -73,13 +73,6 @@
     border-radius: 0.2rem;
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
-
-
-
-
-
-
- 
 
 .bmi .section .itemt1 h4{
     font-size:  var(--font);
@@ -217,12 +210,18 @@
      
     background-size: cover;
     background-color: white;
-    border-radius: 50%;
-    
+    border-radius: 50%; 
+}
+.bmi .section .itemt3 > div{
+    cursor: pointer;
 }
 
 .bmi .section .itemt3 div i{
     font-size: clamp(1rem,1.6vw,1.5rem);
+}
+
+.bmi .two_sections{
+    margin:3% 0;
 }
 
 

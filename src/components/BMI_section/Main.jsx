@@ -19,12 +19,12 @@ const Main = ({ setBmi, setIdl, setLoading1, setLoading2 }) => {
         transform: 'translate(-50%, -50%)',
         width: 'maxContent',
         bgcolor: 'background.paper',
-        border: '1px solid #000',
         boxShadow: 20,
         p: 4,
         display: 'flex',
         flexDirection: 'column',
-        gap: '2rem'
+        gap: '2rem',
+        borderRadius: '5px'
     };
 
 
@@ -90,14 +90,17 @@ const Main = ({ setBmi, setIdl, setLoading1, setLoading2 }) => {
         setLoading2(true)
         request1()
         request2()
-
-
-
-
     }, [values])//eslint-disable-line react-hooks/exhaustive-deps 
 
-
-
+    useEffect(() => {
+        const userinfo = window.localStorage.getItem('uinfo')
+        if (!userinfo) setOpen(true)
+        else setValues(JSON.parse(userinfo))
+        setLoading1(true)
+        setLoading2(true)
+        request1()
+        request2()
+    }, [])//eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <>
@@ -153,7 +156,6 @@ const Main = ({ setBmi, setIdl, setLoading1, setLoading2 }) => {
                         <Fade in={open}>
                             <Box sx={style}>
                                 <Form handleModal={handleModal} values={values} setValues={setValues} />
-
                             </Box>
                         </Fade>
                     </Modal>
