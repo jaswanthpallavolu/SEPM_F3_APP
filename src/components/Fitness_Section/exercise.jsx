@@ -13,7 +13,7 @@ export default function Exercise() {
         return axios.get(url)
     }
 
-    const history_1 = useHistory();
+    const history = useHistory();
 
     const { data } = useQuery("a_1", getworkouts)
 
@@ -32,7 +32,7 @@ export default function Exercise() {
                 {data?.data.map(i => (
                     <div>
                         <div className="heading_1">
-                            <button className="back" onClick={() => history_1.goBack()}></button>
+                            <button className="back" onClick={() => history.goBack()}></button>
                             <div className="heading_2">
                                 <h1>{i.name}</h1>
                             </div>

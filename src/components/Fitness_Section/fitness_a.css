@@ -4,7 +4,7 @@
     background-repeat: repeat;
     position: relative;
     background-size: 100% 100%;
-    height:200vh;
+    height: 100vh;
     
 }
 
@@ -58,20 +58,18 @@
 .fitness_main .container{
     
     position: absolute;
-    top: 7rem;
+    top: 5rem;
     left: 5rem;
-    width: 63rem;
-    display: flex;
-    flex-direction: column;
-    font-size: clamp();
+    width: 83rem;
+    font-size: clamp(0rem, 80%, 2rem);
 }
 
 .fitness_main .info_1{    
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
 }
 
 .fitness_main .info{
     position: absolute;
-    top: 7rem;
+    top: 4rem;
     left: 1rem;
 }

@@ -4,7 +4,7 @@
     background-repeat: repeat;
     position: relative;
     background-size: 100% 100%;
-    height:200vh;
+    height:100vh;
     
 }
 
@@ -21,7 +21,7 @@
     position: absolute;
     top: 7rem;
     left: 5rem;
-    width: 63rem;
+    width: 80rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -47,7 +47,7 @@
 .exercise_main .heading_1{
     display: flex;
     flex-direction: row;
-    gap: 25rem;
+    gap: 35rem;
 }
 
 
