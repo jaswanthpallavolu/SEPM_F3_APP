@@ -32,7 +32,7 @@ export default function Exercise() {
                 {data?.data.map(i => (
                     <div>
                         <div className="heading_1">
-                            <button className="back" onClick={() => history.goBack()}></button>
+                            <button className="back" onClick={() => history.push("/home/fitness")}></button>
                             <div className="heading_2">
                                 <h1>{i.name}</h1>
                             </div>
