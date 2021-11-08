@@ -19,8 +19,6 @@ export default function Exercise() {
 
     const { fid } = useParams();
 
-    console.log(data?.data)
-
     return (
         <div className="exercise_main">
             <div className="container">
@@ -30,7 +28,7 @@ export default function Exercise() {
                 </div>
 
                 {data?.data.map(i => (
-                    <div>
+                    <div key={i.name}>
                         <div className="heading_1">
                             <button className="back" onClick={() => history.push("/home/fitness")}></button>
                             <div className="heading_2">
@@ -40,7 +38,6 @@ export default function Exercise() {
                         <div className="vedios">
                             <Carousel list={i.items} />
                         </div>
-
                     </div>
                 ))}
             </div>

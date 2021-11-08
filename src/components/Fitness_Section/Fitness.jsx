@@ -21,34 +21,31 @@ export default function Fitness() {
     return (
 
         <div className="fitness_main" >
-
-            <div>
-                <div className="container">
-                    <div className="cc">
-                        <div className="heading"><h1> Fitness</h1>
-                        </div>
-                    </div>
-                    <div className="info">
-                        {data?.data.map(item => (
-                            <div className="info_1" key={item.id}>
-                                <div className="heading_2">
-                                    <h1>{item.name}</h1>
-                                </div>
-                                <div className="p1">
-                                    <p>{item.description}</p>
-                                </div>
-                                <div className="button">
-                                    {item.sections.map(i => (
-                                        <button className="b1" key={i.id} onClick={() => history.push("/home/fitness/" + i.id)}>{i.name}</button>
-
-                                    ))}
-
-                                </div>
-                            </div>
-                        ))}
+            <div className="container">
+                <div className="cc">
+                    <div className="heading"><h1> Fitness</h1>
                     </div>
                 </div>
-            </div >
+                <div className="info">
+                    {data?.data.map(item => (
+                        <div className="info_1" key={item.id}>
+                            <div className="heading_2">
+                                <h1>{item.name}</h1>
+                            </div>
+                            <div className="p1">
+                                <p>{item.description}</p>
+                            </div>
+                            <div className="button">
+                                {item.sections.map(i => (
+                                    <button className="b1" key={i.id} onClick={() => history.push("/home/fitness/" + i.id)}>{i.name}</button>
+
+                                ))}
+
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </div >
     )
 }

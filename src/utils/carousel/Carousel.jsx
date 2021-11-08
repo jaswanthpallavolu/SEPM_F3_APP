@@ -7,52 +7,31 @@ export default function Carousel({ list }) {
     const settings = {
         dots: false,
         speed: 500,
-        infinite: false,
+        infinite: true,
         slidesToShow: 3,
-        slidesToScroll: 3,
-        initialSlide: 0,
-        centerMode: false,
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: '60px',
         responsive: [
             {
                 breakpoint: 1920,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 3,
-                }
-            },
-            {
-                breakpoint: 1400,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                }
-            },
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 4,
-                }
-            },
-            {
-                breakpoint: 948,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToScroll: 1,
                 }
             },
             {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToScroll: 1,
                 }
             },
             {
                 breakpoint: 380,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToScroll: 1,
                 }
             }
 

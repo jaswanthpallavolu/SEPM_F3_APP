@@ -1,10 +1,10 @@
 import React from "react";
+import './video.css'
 
 function Vedio({ item }) {
     return (
-        <div className="vedio">
-            <iframe width="400" height="250" src={item.link} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+        <div className="video">
+            <iframe src={item.link} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         </div>
     )
 }
