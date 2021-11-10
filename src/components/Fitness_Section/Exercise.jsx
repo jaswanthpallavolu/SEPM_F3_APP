@@ -24,22 +24,25 @@ export default function Exercise() {
             <div className="container">
 
                 <div className="heading">
-                    <h1> Fitness</h1>
+                    <p> Fitness</p>
                 </div>
-
-                {data?.data.map(i => (
-                    <div key={i.name}>
-                        <div className="heading_1">
-                            <button className="back" onClick={() => history.push("/home/fitness")}></button>
-                            <div className="heading_2">
-                                <h1>{i.name}</h1>
+                <div className="info">
+                    {data?.data.map(i => (
+                        <div key={i.name}>
+                            <div className="row_heading">
+                                <div className="heading_1">
+                                    <button className="back" onClick={() => history.push("/home/fitness")}></button>
+                                    <div className="heading_2">
+                                        <h1>{i.name}</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="vedios">
+                                <Carousel list={i.items} />
                             </div>
                         </div>
-                        <div className="vedios">
-                            <Carousel list={i.items} />
-                        </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
     )
