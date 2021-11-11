@@ -1,7 +1,7 @@
 .fitness_main{
     position: relative;
     width:98vw;
-    height: 275vh;
+    height: 200vh;
 }
 .fitness_main::before{
     content:'';
@@ -17,7 +17,7 @@
     position: absolute;
     top: 7rem;
     left: 5rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .fitness_main .heading{
@@ -40,7 +40,7 @@
     
     color: #fff;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     text-transform: capitalize;
 }
 
@@ -50,7 +50,7 @@
     border: none;
     color: white;
     font-size: 20px;
-    padding: 20px 60px;
+    padding: 20px 40px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -76,11 +76,11 @@
 /* Info */
 .fitness_main .info{
     position: absolute;
-    top: 12rem;
+    top: 8rem;
     left: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 8rem;
+    gap: 5rem;
     width: 80vw;
 } 
 
@@ -94,7 +94,7 @@
         background-attachment: fixed;
         background-repeat: repeat;
         position: absolute;
-        height:100vh;
+        height:150vh;
         width:100vw;
         background-position: 100% 100%;
     }

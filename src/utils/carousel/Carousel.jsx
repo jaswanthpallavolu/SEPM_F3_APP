@@ -11,7 +11,7 @@ export default function Carousel({ list }) {
         slidesToShow: 3,
         slidesToScroll: 1,
         centerMode: true,
-        centerPadding: '60px',
+        centerPadding: '5px',
         responsive: [
             {
                 breakpoint: 1920,
@@ -23,14 +23,14 @@ export default function Carousel({ list }) {
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                 }
             },
             {
                 breakpoint: 380,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                 }
             }
