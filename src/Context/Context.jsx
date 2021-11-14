@@ -12,18 +12,7 @@ export function ContextProvider({ children }) {
     const val = { title, setTitle }
 
     //----BMI SECTION----
-    const [values, setValues] = useState({
-        height: 180,
-        weight: 60,
-        age: 24,
-        gender: 'male',
-        al: 5,
-        goal: 'weightlose'
-    })
 
-    const val1 = {
-        values, setValues
-    }
 
     //----CALORIE CALC SECTION----
     const [name2, setName2] = useState('');
@@ -42,7 +31,7 @@ export function ContextProvider({ children }) {
         <ourContext.Provider
             value={{
                 landing: val,
-                bmi_section: val1,
+
                 cal_section: val2,
                 diet_section: val3,
                 fit_section: val4
