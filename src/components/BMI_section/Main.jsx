@@ -5,7 +5,7 @@ import Form from './Form'
 import axios from 'axios';
 import { useOurContext } from '../../Context/Context';
 
-const Main = ({ setBmi, setIdl, setLoading1, setLoading2 }) => {
+const Main = ({ setBmi, setIdl, setLoading1, setLoading2, setErr1 }) => {
     const { bmi_section } = useOurContext()
     const { values, setValues } = bmi_section
 
@@ -44,11 +44,22 @@ const Main = ({ setBmi, setIdl, setLoading1, setLoading2 }) => {
                 bmi: Number(response.data.data.bmi).toFixed(2),
                 health: response.data.data.health,
             })
+            setErr1({
+                status: false
+            })
+
 
             setLoading1(false)
 
+
         }).catch(function (error) {
-            console.error(error);
+
+            setLoading1(false)
+            setErr1({
+                status: true,
+                des: error.response.data.errors
+            })
+
         });
 
     }
@@ -78,28 +89,32 @@ const Main = ({ setBmi, setIdl, setLoading1, setLoading2 }) => {
             setLoading2(false)
 
 
+
         }).catch(function (error) {
             console.error(error);
+            setLoading2(false)
+
         });
     }
 
 
 
     useEffect(() => {
+
+
         setLoading1(true)
         setLoading2(true)
+
         request1()
         request2()
     }, [values])//eslint-disable-line react-hooks/exhaustive-deps 
 
     useEffect(() => {
+
         const userinfo = window.localStorage.getItem('uinfo')
         if (!userinfo) setOpen(true)
         else setValues(JSON.parse(userinfo))
-        setLoading1(true)
-        setLoading2(true)
-        request1()
-        request2()
+
     }, [])//eslint-disable-line react-hooks/exhaustive-deps
 
     return (
@@ -155,7 +170,7 @@ const Main = ({ setBmi, setIdl, setLoading1, setLoading2 }) => {
                     >
                         <Fade in={open}>
                             <Box sx={style}>
-                                <Form handleModal={handleModal} values={values} setValues={setValues} />
+                                <Form handleModal={handleModal} />
                             </Box>
                         </Fade>
                     </Modal>

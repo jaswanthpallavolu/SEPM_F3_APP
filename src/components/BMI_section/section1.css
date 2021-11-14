@@ -40,12 +40,39 @@
     margin:1rem 0;
 }
 
+.bmi .section1 .Lcon h3 span{
+    font-weight: 400;
+     
+    padding:0.2rem 0.5rem;
+
+}
+
+.bmi .section1 .Lcon h2{
+    font-weight: 400;
+    font-size:clamp(1rem,2.2vw,3rem);
+    margin:1rem 0;
+     
+     color:rgb(57, 26, 77) ;
+}
+
+.bmi .section1 .Lcon .in{
+    text-align: center;
+    width: 100%;
+}
+
 .bmi .section1 .Lcon h4{
     
-    font-weight: 350;
+    font-weight: 300;
     font-size:  clamp(1.2rem,2.5vw,3rem);
     margin: 1rem 0;
 
+}
+
+.bmi .section1 .Lcon h4 span{
+    font-weight: 600;
+    color: var(--primary);
+    padding:0.2rem 0.5rem;
+    
 }
 
 .bmi .section1 .Lcon button{
@@ -76,6 +103,16 @@
     margin: 1rem 0;
     font-weight: 300;
 }
+
+.bmi .section1 .Lcon h5 span{
+    
+    
+    font-weight: 400;
+    color:var(--light)
+
+}
+
+
 
 .bmi .section1 .R{
     grid-column: 4/5;

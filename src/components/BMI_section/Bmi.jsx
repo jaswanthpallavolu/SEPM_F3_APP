@@ -25,6 +25,14 @@ export default function Bmi() {
     const [loading2, setLoading2] = useState(false)
     const [toggleSection, setToggleSection] = useState(false)
 
+    const [err1, setErr1] = useState({
+        status: "",
+        des: "",
+
+    })
+
+
+
     return (
 
         <div className="bmi">
@@ -34,11 +42,11 @@ export default function Bmi() {
                     <h3>BMI</h3>
                 </div>
 
-                <Main setBmi={setBmi} setIdl={setIdl} setLoading1={setLoading1} setLoading2={setLoading2} />
+                <Main setBmi={setBmi} setIdl={setIdl} setLoading1={setLoading1} setLoading2={setLoading2} setErr1={setErr1} />
 
                 <div className="two_sections">
                     {!toggleSection ?
-                        <Section1 loading1={loading1} loading2={loading2} idl={idl} bmi={bmi} setToggleSection={setToggleSection} />
+                        <Section1 loading1={loading1} loading2={loading2} idl={idl} bmi={bmi} setToggleSection={setToggleSection} err1={err1} />
                         : <BMR setToggleSection={setToggleSection} />}
                 </div>
             </div>
