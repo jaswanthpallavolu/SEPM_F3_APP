@@ -9,8 +9,8 @@ const Main = ({ setBmi, setIdl, setLoading1, setLoading2, setErr1 }) => {
 
 
     const [values, setValues] = useState(JSON.parse(window.localStorage.getItem('uinfo')) || {
-        height: "170",
-        weight: "80",
+        height: "180",
+        weight: "70",
         age: "26",
         gender: "male",
         al: "5",
