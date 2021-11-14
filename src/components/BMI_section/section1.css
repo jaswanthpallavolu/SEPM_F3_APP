@@ -40,6 +40,13 @@
     margin:1rem 0;
 }
 
+.bmi .section1 .Lcon h3 span{
+    font-weight: 400;
+     
+    padding:0.2rem 0.5rem;
+
+}
+
 .bmi .section1 .Lcon h2{
     font-weight: 400;
     font-size:clamp(1rem,2.2vw,3rem);
@@ -62,10 +69,10 @@
 }
 
 .bmi .section1 .Lcon h4 span{
-    font-weight: 400;
+    font-weight: 600;
     color: var(--primary);
     padding:0.2rem 0.5rem;
-    background-color: white;
+    
 }
 
 .bmi .section1 .Lcon button{
@@ -98,8 +105,10 @@
 }
 
 .bmi .section1 .Lcon h5 span{
-    padding: 0 0.1rem;
-    background-color: white;
+    
+    
+    font-weight: 400;
+    color:var(--light)
 
 }
 
