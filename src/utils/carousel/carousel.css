@@ -2,7 +2,7 @@
  
 .m_carousel .slick-list{
   margin-top: 2%;
-  height:max(40vh,15rem);
+  height:min(40vh,20rem);
 }
 /* .m_carousel .slick-arrow.slick-prev,
 .m_carousel .slick-arrow.slick-next{

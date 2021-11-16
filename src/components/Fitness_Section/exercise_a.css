@@ -17,15 +17,20 @@
     background: var(--primary);
 }
 .exercise_main .heading{
+    position: relative;
+    left:5%;
+    width:max-content;
     font-size: 3rem;
 }
 .exercise_main .container{
     position: absolute;
     top: 7rem;
-    left: 5rem;
+    width:100%;
     text-transform: capitalize;
 }
 .exercise_main .back{
+    position: absolute;
+    left:5%;
     background-image: url('icons8-left-50.png');
     background-repeat: no-repeat;
     background-position-x: center;
@@ -37,29 +42,30 @@
     text-decoration: none;
     /* display: inline-block; */
     font-size: 20px;
-    margin: 5px 10px;
     cursor: pointer;
     border-radius: 15px;
 }
 
 .exercise_main .heading_1{
-    display: flex;
+    display: grid;
+    place-items: center;
+    /* display: flex;
     flex-direction: row;
-    gap:35rem;
-    margin-bottom: 5rem;
+    gap:35rem; */
+    margin-bottom: 4rem;
 }
 
 .exercise_main .info{
     position: absolute;
     top: 8rem;
-    left: 1rem;
-    width: 83rem;
+     
+    width: 100%;
 } 
 
 .exercise_main .vedios{
-    position:absolute;
-    left: 100px;
-    width: 70rem;
+   
+    margin:auto;
+    width:80%;
 }
 
 @media all and (max-width:600px){
