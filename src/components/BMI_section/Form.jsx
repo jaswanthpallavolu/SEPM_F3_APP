@@ -1,10 +1,11 @@
 import React, { useRef, useState, useEffect } from 'react'
 import './Form.css';
+import { useOurContext } from '../../Context/Context';
 
+const Form = ({ handleModal }) => {
 
-const Form = ({ handleModal, values, setValues }) => {
-
-
+    const { bmi_section } = useOurContext()
+    const { values, setValues } = bmi_section
     const [age, setAge] = useState(values.age)
     const [weight, setWeight] = useState(values.weight)
     const [height, setHeight] = useState(values.height)

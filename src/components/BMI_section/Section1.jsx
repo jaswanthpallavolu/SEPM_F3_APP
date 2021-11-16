@@ -17,7 +17,7 @@ export default function Section1({ setToggleSection, bmi, loading1, loading2, id
                             })}
 
                         </> : <>
-                            <h3>You Are At <span> {bmi.health} </span></h3>
+                            <h3>You Are At {bmi.health} </h3>
                             <h4>with BMI Value <span> {bmi.bmi}</span></h4>
                             <h5>by maintaining a healthy weight you lower your risk of serious healthy problems. Healthy BMI range <span>[18.5 - 24.9]</span></h5>
                         </>}

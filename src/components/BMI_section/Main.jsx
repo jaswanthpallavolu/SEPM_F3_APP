@@ -3,19 +3,12 @@ import { Modal, Fade, Box, Backdrop } from '@mui/material'
 
 import Form from './Form'
 import axios from 'axios';
-
+import { useOurContext } from '../../Context/Context';
 
 const Main = ({ setBmi, setIdl, setLoading1, setLoading2, setErr1 }) => {
-
-
-    const [values, setValues] = useState(JSON.parse(window.localStorage.getItem('uinfo')) || {
-        height: "180",
-        weight: "70",
-        age: "26",
-        gender: "male",
-        al: "5",
-        goal: 'weightlose'
-    })
+    const { bmi_section } = useOurContext()
+    // eslint-disable-next-line
+    const { values, setValues } = bmi_section
 
     const [open, setOpen] = useState(false);
     const handleModal = () => setOpen(!open);
@@ -120,12 +113,7 @@ const Main = ({ setBmi, setIdl, setLoading1, setLoading2, setErr1 }) => {
     useEffect(() => {
 
         const userinfo = window.localStorage.getItem('uinfo')
-        if (!userinfo) {
-
-            setOpen(true)
-
-
-        }
+        if (!userinfo) setOpen(true)
 
 
     }, [])//eslint-disable-line react-hooks/exhaustive-deps
@@ -183,7 +171,7 @@ const Main = ({ setBmi, setIdl, setLoading1, setLoading2, setErr1 }) => {
                     >
                         <Fade in={open}>
                             <Box sx={style}>
-                                <Form handleModal={handleModal} values={values} setValues={setValues} />
+                                <Form handleModal={handleModal} />
                             </Box>
                         </Fade>
                     </Modal>
