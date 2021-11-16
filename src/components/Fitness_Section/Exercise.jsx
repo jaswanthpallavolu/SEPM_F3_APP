@@ -45,7 +45,7 @@ export default function Exercise() {
                             </div>
                         ))}
                     </div>
-                    : <div style={{ width: '80vw', display: 'grid', placeItems: 'center' }}><CircularProgress color='secondary' /></div>}
+                    : <div style={{ width: '100vw', display: 'grid', placeItems: 'center', marginTop: '10%' }}><CircularProgress color='secondary' /></div>}
             </div>
         </div>
     )

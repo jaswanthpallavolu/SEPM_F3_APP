@@ -17,7 +17,7 @@ export default function Landing() {
                 <h1>Care yourself</h1>
                 <Sections />
                 <footer>
-                    <div className="dis">Desclaimer: This application gives only the suggestions and it is your sole responsibility to follow it or not </div>
+                    <div className="dis">Disclaimer: This application gives only the suggestions and it is your sole responsibility to follow it or not </div>
                     <div className="cright">&copy; Fit-Fab-Fun 2021</div>
                 </footer>
             </div>

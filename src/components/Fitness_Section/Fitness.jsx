@@ -44,7 +44,7 @@ export default function Fitness() {
                             </div>
                         ))}
                     </div>
-                    : <div style={{ width: '80vw', display: 'grid', placeItems: 'center' }}><CircularProgress color='secondary' /></div>}
+                    : <div style={{ width: '80vw', display: 'grid', placeItems: 'center', paddingTop: '15%' }}><CircularProgress color='secondary' /></div>}
             </div>
         </div >
     )
