@@ -69,7 +69,7 @@ function CalorieCalc() {
 
                                     </div>
 
-                                    <div className="item">
+                                    <div className="cal_item">
                                         <p id="a">Carbs   </p>
                                         <p id="a">Fats   </p>
                                         <p id="a">Fiber  </p>
