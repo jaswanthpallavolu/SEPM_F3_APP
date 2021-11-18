@@ -36,7 +36,7 @@ const Main = ({ setBmi, setIdl, setLoading1, setLoading2, setErr1 }) => {
             params: { age: values.age, weight: values.weight, height: values.height },
             headers: {
                 'x-rapidapi-host': 'fitness-calculator.p.rapidapi.com',
-                'x-rapidapi-key': '310250d845msh85722434421dd94p1632fcjsn0582c000cbf0'
+                'x-rapidapi-key': `${process.env.REACT_APP_BMIKEY}`
             }
         };
 
@@ -74,7 +74,7 @@ const Main = ({ setBmi, setIdl, setLoading1, setLoading2, setErr1 }) => {
             params: { gender: values.gender, weight: values.weight, height: values.height },
             headers: {
                 'x-rapidapi-host': 'fitness-calculator.p.rapidapi.com',
-                'x-rapidapi-key': '310250d845msh85722434421dd94p1632fcjsn0582c000cbf0'
+                'x-rapidapi-key': `${process.env.REACT_APP_BMIKEY}`
             }
         };
 

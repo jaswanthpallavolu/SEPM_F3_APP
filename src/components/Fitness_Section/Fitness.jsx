@@ -8,7 +8,7 @@ import { CircularProgress } from "@mui/material";
 export default function Fitness() {
 
     const getCategories = () => {
-        const url = 'https://f3-health-api.herokuapp.com/fitness/categories/'
+        const url = `${process.env.REACT_APP_OURAPI}/fitness/categories/`
 
         return axios.get(url)
     }

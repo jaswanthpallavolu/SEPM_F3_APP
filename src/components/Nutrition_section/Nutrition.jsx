@@ -10,7 +10,7 @@ export default function Nutrition() {
     const [id, setId] = useState('6146c553d65b61b05a4e337c')
     const [name, setName] = useState('Complex Carbs')
     const { data, isLoading } = useQuery([id], () => {
-        const url = `https://f3-health-api.herokuapp.com/nutrition/category/${id}`
+        const url = `${process.env.REACT_APP_OURAPI}/nutrition/category/${id}`
         return axios.get(url, { headers: { 'Access-Control-Allow-Origin': '*' } })
     })
     const setCategory = e => {

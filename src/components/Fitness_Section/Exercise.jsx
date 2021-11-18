@@ -10,7 +10,7 @@ import Carousel from "../../utils/carousel/Carousel";
 export default function Exercise() {
 
     const getworkouts = () => {
-        const url = "https://f3-health-api.herokuapp.com/fitness/categories/" + fid
+        const url = `${process.env.REACT_APP_OURAPI}/fitness/categories/${fid}`
         return axios.get(url)
     }
 

@@ -26,7 +26,7 @@ export default function BMR({ setToggleSection }) {
             },
             headers: {
                 'x-rapidapi-host': 'fitness-calculator.p.rapidapi.com',
-                'x-rapidapi-key': '9f308b0b1emsh5b18f79da1aa341p1a6289jsnbb369dd16452'
+                'x-rapidapi-key': `${process.env.REACT_APP_BMRKEY}`
             }
         };
         await axios.request(options, signal)

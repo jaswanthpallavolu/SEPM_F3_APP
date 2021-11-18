@@ -20,7 +20,7 @@ function CalorieCalc() {
             url: 'https://api.edamam.com/api/food-database/v2/parser',
             params: {
                 app_id: 'f31fef05',
-                app_key: ' a4574338171629cdd3068e3d5be69484',
+                app_key: `${process.env.REACT_APP_CALCKEY}`,
                 ingr: query.trim()
             },
         }
@@ -47,7 +47,7 @@ function CalorieCalc() {
                         <input
                             type="text"
                             className="calc_input"
-                            placeholder="search for food, fruit, vegetable.."
+                            placeholder="search for an ingredient.."
                             value={query}
                             onChange={(e) => setquery(e.target.value)}
                         />
