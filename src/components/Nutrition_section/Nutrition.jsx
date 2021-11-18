@@ -1,50 +1,69 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useQuery } from 'react-query'
 import './Nutrition.css'
-
+import Item from './Item'
+import axios from 'axios'
+import { CircularProgress } from '@mui/material'
 
 
 export default function Nutrition() {
+    const [id, setId] = useState('6146c553d65b61b05a4e337c')
+    const [name, setName] = useState('Complex Carbs')
+    const { data, isLoading } = useQuery([id], () => {
+        const url = `${process.env.REACT_APP_OURAPI}/nutrition/category/${id}`
+        return axios.get(url, { headers: { 'Access-Control-Allow-Origin': '*' } })
+    })
+    const setCategory = e => {
+        const category = e.target.closest('.category')
+        if (!category) return
+        var btns = document.querySelectorAll('.left .category')
+        btns.forEach(i => {
+            i.classList.remove('active')
+        })
+        setName(category.innerText)
+        setId(category.getAttribute('value'))
+        category.classList.add('active')
 
-    // const fetch = async () => {
-    //     const url = 'https://f3-health-api.herokuapp.com/nutrition/category/6146c540d65b61b05a4e3378'
-    //     await axios.get(url)
-    //         .then(data => console.log(data))
-    //         .catch(err => console.log(err))
-    // }
+
+
+
+    }
+    useEffect(() => {
+        const left = document.querySelector('.left')
+        left.addEventListener('click', setCategory)
+        return () => left.removeEventListener('click', setCategory)
+    }, [])
     return (
 
         <div className="Nutrition" >
-
+            <div className="sec_head" >Nutrition</div>
             <div className="content">
-                <div className="sec_head" >Nutrition</div>
-                <div className="row">
-                    <section className="left">
+                <section className="left">
+                    <div className="category active" value='6146c553d65b61b05a4e337c' >Complex Carbs</div>
+                    <div className="category" value='6146c540d65b61b05a4e3378'>High Protien</div>
+                    <div className="category" value='6146c549d65b61b05a4e337a'>Low Fat</div>
+                    <div className="mcategory">Vitamins</div>
+                    <div className="sub">
+                        <div className="category" value='6146c57bd65b61b05a4e3380'>Vitamin A</div>
+                        <div className="category" value='6146c580d65b61b05a4e3382' >Vitamin C</div>
+                        <div className="category" value='6146c584d65b61b05a4e3384'>Vitamin D</div>
+                        <div className="category" value='6146c589d65b61b05a4e3386'>Vitamin B</div>
+                    </div>
 
-                        <div className="Bar">
-                            <ul>
-                                <li>Complex Carbs</li>
-                                <li>High protien</li>
-                                <li>Low fat</li>
-                                <li className="list"> Vitamins <i className="arrow down"></i>
+                </section>
+                <section className="right">
+                    <div className="title">{name}</div>
+                    <div className="content">
+                        {!isLoading ?
+                            <>
+                                {data?.data[0].items.map(i => (
+                                    <Item key={i.id} item={i} />
+                                ))}
+                            </>
+                            : <div style={{ display: 'grid', placeItems: 'center' }}> <CircularProgress color='secondary' /></div>}
+                    </div>
+                </section>
 
-                                </li>
-                            </ul>
-
-                        </div>
-
-                    </section>
-                    <section className="right">
-                        <div className="heading2">High Protien</div>
-                        <div className="card">
-                            <img src="https://www.ourochreway.com/wp-content/uploads/2018/04/6FED8232-758A-4AE4-AD51-5090D4B8D91B.jpeg" alt="no" style={{ width: "100%" }}></img>
-                            <div className="container">
-                                <p>Egg<button >get info</button></p>
-
-                            </div>
-                        </div>
-                        {/* <button onClick={fetch}>click</button> */}
-                    </section>
-                </div>
             </div>
         </div>
 

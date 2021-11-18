@@ -1,17 +1,29 @@
 import React, { createContext, useContext, useState } from 'react'
 
 const ourContext = createContext();
+
 export const useOurContext = () => {
     return useContext(ourContext);
 }
+
 export function ContextProvider({ children }) {
     //LANDING PAGE SECTION
     const [title, setTitle] = useState('F3 Web App');
     const val = { title, setTitle }
 
     //----BMI SECTION----
-    const [name1, setName1] = useState('this is BMI section');
-    const val1 = { name1, setName1 }
+    const [values, setValues] = useState(JSON.parse(window.localStorage.getItem('uinfo')) || {
+        height: 185,
+        weight: 68,
+        age: 18,
+        gender: 'male',
+        al: 5,
+        goal: 'weightlose'
+    })
+
+    const val1 = {
+        values, setValues
+    }
 
     //----CALORIE CALC SECTION----
     const [name2, setName2] = useState('');

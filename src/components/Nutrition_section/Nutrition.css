@@ -8,7 +8,7 @@
   .Nutrition::before{
     content: '';
     position: fixed;
-    width:100%;
+    width:100vw;
     height:100vh;
     z-index:1;
     background: var(--primary-dark);
@@ -16,17 +16,11 @@
     background-position: 100% 100%;
     background-size: cover;
   }
-  .Nutrition .content{
-    position: absolute;
-    top:0;
-    z-index:2;
-    width:100%;
-    height: 100vh;
-  }
   .Nutrition .sec_head{
     position: absolute;
     top:10vh;
     left:5%;
+    z-index:1;
     font-weight: 600;
     font-size: 2.5rem;
   }
@@ -40,94 +34,72 @@
     background: var(--primary);
   }
 
- 
 
-
-.Nutrition .row{
-    /* border:2px solid red; */
-    height:100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.Nutrition .content{
+  position: absolute;
+  top:20%;
+  width:100vw;
+  height:80%;
+  z-index:2;
+  /* border:1px solid red; */
+  display: flex;
 }
-.Nutrition .left{
-  flex: 2;
+.Nutrition .content .left{
+  /* border:1px solid red; */
+  flex: 1.5;
+  margin-top:2%;
 }
 .Nutrition .right{
+  position: relative;
+  /* border:1px solid red; */
   flex: 5;
-}
-
+  display: flex;
+  justify-content: center;
+  
+} 
 
 /* LEFT COLUMN */
-.Nutrition ul {
-        list-style-type: none;
-        margin: 220px 109px;
-        
-        width: 175px;
-       
-       
-        font-weight: 500;
-        background-color:rgba(0, 0, 0, 0);
+.Nutrition .left .category,
+.Nutrition .left .mcategory{
+    cursor: pointer;
+    margin:.5rem auto;
+    background: white;
+    width:15vw;
+    padding: 1rem;
+    text-align: center;
+    font-size: clamp(.5rem,2vw,1.1rem);
 }
-      
-.Nutrition  li  {
-  text-align: center;
-  
-  width:12rem;
- 
-  background-color: #f1f1f1;
-  margin: 1rem;
-  padding: .5rem 1rem;
+.Nutrition .left .mcategory{cursor:default;}
+.Nutrition .left .category:hover{
+  background: rgba(0,0,0,0.6);
+  color: white;
 }
-.Nutrition .left .list{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap:.5rem;
+.Nutrition .left .category.active{
+  background: rgba(0,0,0,0.6);
+  color: white;
 }
- 
+.Nutrition .left .sub{
+  margin-left: 5%;
+}
+
 
 /* RIGHT COLUMN */
-.Nutrition .right .heading2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.Nutrition .right .title{
+  /* border:1px solid red; */
+  margin: 2% 2% ;
+  font-size: 2.5rem;
+  height: max-content;
 }
-.Nutrition .arrow {
-  border: solid black;
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: 2px;
-}
-.Nutrition  .down {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}
-
- 
-.Nutrition .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  border-radius: 4px;
- 
-  width:15rem;
-  background-color: #f1f1f1;
- 
-}
-
-.Nutrition .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+.Nutrition .right .content{
+  position: absolute;
+  top:15%;
+  width:100%;
+  /* border:1px solid red; */
+  display: grid;
+  padding: 1rem;
   
-}
+  grid-template-columns: repeat(auto-fit,minmax(80px,250px));
+  overflow: auto;
+  justify-content: center;
 
-.Nutrition .container {
-  padding: 10px 10px;
-  
-}
- 
-.Nutrition button{
-  float: right;
-  border-radius: 3px;
-  background-color: #FFA3B6;
-  border: none;
-  padding: 3px;
-  text-align: center;
 }

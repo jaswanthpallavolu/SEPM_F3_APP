@@ -3,19 +3,12 @@ import { Modal, Fade, Box, Backdrop } from '@mui/material'
 
 import Form from './Form'
 import axios from 'axios';
+import { useOurContext } from '../../Context/Context';
 
-const Main = ({ setBmi, setIdl, setLoading1, setLoading2 }) => {
-
-
-    const [values, setValues] = useState({
-        height: 180,
-        weight: 60,
-        age: 24,
-        gender: 'male',
-        al: 5,
-        goal: 'Weight Loss'
-
-    })
+const Main = ({ setBmi, setIdl, setLoading1, setLoading2, setErr1 }) => {
+    const { bmi_section } = useOurContext()
+    // eslint-disable-next-line
+    const { values, setValues } = bmi_section
 
     const [open, setOpen] = useState(false);
     const handleModal = () => setOpen(!open);
@@ -27,12 +20,12 @@ const Main = ({ setBmi, setIdl, setLoading1, setLoading2 }) => {
         transform: 'translate(-50%, -50%)',
         width: 'maxContent',
         bgcolor: 'background.paper',
-        border: '1px solid #000',
         boxShadow: 20,
         p: 4,
         display: 'flex',
         flexDirection: 'column',
-        gap: '2rem'
+        gap: '2rem',
+        borderRadius: '5px'
     };
 
 
@@ -43,30 +36,31 @@ const Main = ({ setBmi, setIdl, setLoading1, setLoading2 }) => {
             params: { age: values.age, weight: values.weight, height: values.height },
             headers: {
                 'x-rapidapi-host': 'fitness-calculator.p.rapidapi.com',
-                'x-rapidapi-key': '310250d845msh85722434421dd94p1632fcjsn0582c000cbf0'
+                'x-rapidapi-key': `${process.env.REACT_APP_BMIKEY}`
             }
         };
 
         axios.request(options).then(function (response) {
-
-
-
-
             setBmi({
                 bmi: Number(response.data.data.bmi).toFixed(2),
                 health: response.data.data.health,
             })
+            setErr1({
+                status: false
+            })
+
 
             setLoading1(false)
 
 
-
-
-
-
-
         }).catch(function (error) {
-            console.error(error);
+
+            setLoading1(false)
+            setErr1({
+                status: true,
+                des: error.response.data.errors
+            })
+
         });
 
     }
@@ -80,21 +74,11 @@ const Main = ({ setBmi, setIdl, setLoading1, setLoading2 }) => {
             params: { gender: values.gender, weight: values.weight, height: values.height },
             headers: {
                 'x-rapidapi-host': 'fitness-calculator.p.rapidapi.com',
-                'x-rapidapi-key': '310250d845msh85722434421dd94p1632fcjsn0582c000cbf0'
+                'x-rapidapi-key': `${process.env.REACT_APP_BMIKEY}`
             }
         };
 
         axios.request(options).then(function (response) {
-
-
-
-
-
-
-
-
-
-
 
             setIdl({
                 hamwi: Number(response.data.data.Hamwi).toFixed(),
@@ -106,26 +90,33 @@ const Main = ({ setBmi, setIdl, setLoading1, setLoading2 }) => {
             setLoading2(false)
 
 
+
         }).catch(function (error) {
             console.error(error);
+            setLoading2(false)
+
         });
     }
 
 
 
     useEffect(() => {
+
+
         setLoading1(true)
         setLoading2(true)
+
         request1()
         request2()
-
-
-
-
     }, [values])//eslint-disable-line react-hooks/exhaustive-deps 
 
+    useEffect(() => {
+
+        const userinfo = window.localStorage.getItem('uinfo')
+        if (!userinfo) setOpen(true)
 
 
+    }, [])//eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <>
@@ -180,8 +171,7 @@ const Main = ({ setBmi, setIdl, setLoading1, setLoading2 }) => {
                     >
                         <Fade in={open}>
                             <Box sx={style}>
-                                <Form handleModal={handleModal} values={values} setValues={setValues} />
-
+                                <Form handleModal={handleModal} />
                             </Box>
                         </Fade>
                     </Modal>
